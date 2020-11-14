@@ -157,7 +157,8 @@ export class Dev extends Dispose {
   }
 
   attachServer(...args: string[]) {
-    this.execute('attach', args);
+    log(`${args}`);
+    this.execute('attach -d all', args);
   }
 
   private async execute(cmd: string, args: string[]) {
